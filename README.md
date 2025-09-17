@@ -4,3 +4,5 @@ first one
 This is my try to learn how to program a website and do it in english
 ### Autor
 DDfloyD
+#### Photos
+Plataforma hidraulia.tif
