@@ -1,9 +1,82 @@
 # My-new-repo
-first one
-## About
-This is my try to learn how to program a website and do it in english
-### Autor
-DDfloyD
-#### Photos
-<img width="268" height="168" alt="Valvula direccional cuadruple de 2 vias" src="https://github.com/user-attachments/assets/f99322da-64e2-4017-80fa-7f3d0257828b" /> <img width="493" height="365" alt="Unidad hidraulica (esquema)" src="https://github.com/user-attachments/assets/039b4191-be64-489f-a413-6c8555354dc1" /> <img width="270" height="292" alt="Cilindros de simple y doble efecto" src="https://github.com/user-attachments/assets/1e6d116a-d6d1-470b-ae1a-7d073ae63530" />
+
+ Showroom Hidráulica y Neumática
+baseurl: "" 
+url: "https://Diegoayala115.github.io"
+collections:
+  products:
+    output: true
+    permalink: /:collection/:title/
+---
+layout: default
+title: Inicio
+---
+
+<h1>{{ site.title }}</h1>
+<ul>
+  {% for p in site.products %}
+    <li>
+      <a href="{{ p.url }}">
+        <img src="{{ p.image }}" alt="{{ p.title }}" width="150">
+        <h2>{{ p.title }}</h2>
+      </a>
+      <p>{{ p.specs.presion }} · {{ p.specs.caudal }}</p>
+    </li>
+  {% endfor %}
+</ul>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  {{ content }}
+</body>
+</html>
+
+---
+producto:
+ Bomba hidráulica BH-200
+ 
+ ![Bomba Hidraulica](https://github.com/user-attachments/assets/90796c6d-8f02-451c-95ba-df155ebba730)
+
+Datos tecnicos:
+  presion: "250 bar"
+  caudal: "20 L/min"
+  material: "Acero inoxidable"
+  conexion: "G1/2"
+---
+La BH-200 es una bomba robusta para aplicaciones industriales de alta presión. Ideal en prensas, sistemas de elevación y maquinaria móvil.
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  color: #005288;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
