@@ -1,6 +1,6 @@
 # My-new-repo
 
- Showroom Hidráulica y Neumática
+ site.title:Showroom Hidráulica y Neumática
 baseurl: "" 
 url: "https://Diegoayala115.github.io"
 collections:
